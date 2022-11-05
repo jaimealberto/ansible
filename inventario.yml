@@ -1,0 +1,13 @@
+---
+all:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  children:
+    ubuntu:
+      hosts:
+        host_ubuntu:
+          ansible_host: 192.168.1.202
+    rpi:
+      hosts:
+        host_rpi:
+          ansible_host: 192.168.1.202
