@@ -1,5 +1,3 @@
 ## Notas
 
-Repò play-books para ansible:
-
-
+Repò play-books para Ansible
