@@ -1,0 +1,21 @@
+---
+- name: Actualizacion rpi
+  hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: Actualiza la caché y todos los paquetes
+      register: updatesys
+      apt: 
+        name: "*"
+        state: latest
+        update_cache: yes
+    - name: Eliminar los paquetes inútiles de la caché
+      apt:
+        autoclean: yes
+    - name: Eliminar las dependencias que ya no son necesarias
+      apt:
+        autoremove: yes
+    - name: Mostrar la última línea de la tarea anterior para comprobar las estadísticas
+      debug:
+        msg:  "{{updatesys.stdout_lines|last}}"
+...

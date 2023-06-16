@@ -2,7 +2,7 @@
 # Ejemplo:  ansible-playbook windows_hosts.yml -C
 # ansible-galaxy collection install ansible.windows
 # 
-- hosts: windows
+- hosts: localhost
   roles:
     - search
     - download
