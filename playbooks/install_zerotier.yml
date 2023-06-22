@@ -1,0 +1,8 @@
+# ansible-playbook playbook.yml --limit nombre-del-host
+---
+- name: Install ZeroTier client Ubuntu 18 adn Ubuntu 20
+  hosts: localhost
+   
+  roles:
+    - role: install_zerotier
+      when: ansible_distribution == 'Ubuntu'

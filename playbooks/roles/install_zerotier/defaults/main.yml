@@ -1,0 +1,3 @@
+---
+# defaults file for install_zerotier
+NETWORK: "<id-network-zerotier>"
