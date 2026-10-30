@@ -1,0 +1,14 @@
+# Ansible
+*.retry
+*.log
+
+# Credenciales / vault (nunca subir en claro)
+vault_pass.txt
+*.vault
+
+# Python
+__pycache__/
+*.pyc
+
+# Editores
+.DS_Store
